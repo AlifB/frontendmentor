@@ -1,0 +1,74 @@
+@font-face {
+    font-family: Outfit;
+    src: url('../fonts/Outfit-VariableFont_wght.ttf');
+}
+
+:root {
+--clr-light-gray: hsl(212, 45%, 89%);
+--clr-grayish-blue: hsl(220, 15%, 55%);
+--clr-dark-blue: hsl(218, 44%, 22%);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Outfit, sans-serif;
+    background-color: var(--clr-light-gray);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.card {
+    width: 285px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 15px;
+    margin: 25px;
+    text-align: center;
+    box-shadow: 0 5px 15px #00000010;
+}
+
+@media screen and (max-width: 425px) {
+    .card {
+        width: auto;
+    }
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.card h3 {
+    margin: 20px 0 15px 0;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.card p {
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--clr-grayish-blue);
+    padding: 0 20px;
+    margin-bottom: 25px;
+}
+
+.attribution {
+    position: fixed;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}

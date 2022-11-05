@@ -1,0 +1,187 @@
+@font-face {
+    font-family: 'Space Grotesk';
+    src: url('../fonts/SpaceGrotesk-VariableFont_wght.ttf');
+}
+
+:root {
+    --clr-light-grayish-violet: hsl(270, 3%, 87%);
+    --clr-dark-grayish-violet: hsl(279, 6%, 55%);
+    --clr-very-dark-violet: hsl(278, 68%, 11%);
+}
+
+body {
+    display: flex;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Space Grotesk', sans-serif;
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.cards-background {
+    position: relative;
+    flex: 1;
+    background-image: url('../images/bg-main-desktop.png');
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    color: white;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+}
+
+.card-front {
+    top: 20%;
+    right: -25%;
+}
+
+.card-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.card-logo {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+.card-number {
+    position: absolute;
+    bottom: 30%;
+    left: 50%;
+    width: 80%;
+    transform: translateX(-50%);
+    font-size: 27px;
+    word-spacing: 6px;
+    letter-spacing: 2px;
+}
+
+.cardholder-exp {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    width: 80%;
+    transform: translateX(-50%);
+}
+
+.card-back {
+    bottom: 20%;
+    right: -50%;
+}
+
+.card-cvc {
+    position: absolute;
+    bottom: 48%;
+    right: 13%;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 2;
+}
+
+form {
+    width: 50%;
+    margin-left: 250px;
+    text-transform: uppercase;
+}
+
+label, legend {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+#cardholder-label, #card-number-label {
+    width: 100%;
+}
+
+input {
+    box-sizing: border-box;
+	border: 1px solid var(--clr-light-grayish-violet);
+    border-radius: 10px;
+	padding: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+input::placeholder {
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--clr-dark-grayish-violet);
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+fieldset {
+    flex: 1;
+    border: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+fieldset input {
+    margin: 0;
+}
+
+input[type=submit] {
+    width: 100%;
+    color: white;
+    background-color: var(--clr-very-dark-violet);
+    border: none;
+    margin: 0;
+    padding: 15px;
+}
+
+input:focus, input:focus-visible {
+    background: linear-gradient(white, white) padding-box,
+    linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+    border-color: transparent;
+    outline: none;
+}
+
+.exp-cvc {
+    display: flex;
+    gap: 20px
+}
+
+#cvc {
+    flex: 1;
+}
+
+.attribution {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}

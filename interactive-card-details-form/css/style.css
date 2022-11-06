@@ -154,10 +154,12 @@ fieldset input {
     margin: 0;
 }
 
-input[type=submit] {
+input[type=submit],
+input[type=submit]:focus,
+input[type=submit]:focus-visible {
     width: 100%;
     color: white;
-    background-color: var(--clr-very-dark-violet);
+    background: var(--clr-very-dark-violet);
     border: none;
     margin: 0;
     padding: 15px;
